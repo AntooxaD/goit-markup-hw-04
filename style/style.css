@@ -11,6 +11,7 @@
   --line-color: #ececec;
   --card-dorder-color: #eeeeee;
   --social-links-color: #afb1b8;
+  --footer-icon--color: #44454e;
 }
 body {
   font-family: Roboto, sans-serif;
@@ -28,7 +29,6 @@ body {
   margin: 0 auto;
   padding-top: 94px;
   margin-top: 0;
-  margin-right: -30px;
 }
 .boxHeader {
   border-bottom: 1px var(--line-color) solid;
@@ -200,17 +200,46 @@ body {
   display: flex;
   flex-wrap: wrap;
   text-align: left;
-  list-style-type: none;
+  list-style: none;
   padding: 0;
   margin: 0;
   padding-bottom: 94px;
+  margin-right: -30px;
 }
 .listCard {
   flex-basis: calc(100% / 3 - 30px);
   margin-right: 30px;
+  cursor: pointer;
+  border: none;
+}
+
+.cardText {
+  outline: 1px solid var(--card-dorder-color);
+  padding: 20px 24px;
+}
+.work {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  margin-bottom: 4;
+  padding: 0;
+}
+.aboutWork {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.8;
+}
+.listCard:hover,
+.listCard:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .listCard:nth-last-child(-n + 6) {
   margin-top: 30px;
+}
+.listCard:nth-child(3n + 3) {
+  margin-right: -30px;
 }
 /*основные заголовки и описание к ним*/
 .sectionAbout {
@@ -324,6 +353,8 @@ body {
 .iconCompany {
   display: flex;
   justify-content: center;
+  width: 170px;
+  height: 92px;
   align-items: center;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -333,6 +364,7 @@ body {
 .iconCompany:hover,
 .iconCompany:focus {
   display: inline-flex;
+  border-color: var(--highlight-color);
   fill: var(--highlight-color);
 }
 .ourBoxTeam {
@@ -380,33 +412,15 @@ body {
   background-color: var(--highlight-color);
 }
 
-.card {
-  border-bottom: 1px solid var(--card-dorder-color);
-  border-right: 1px solid var(--card-dorder-color);
-  border-left: 1px solid var(--card-dorder-color);
-}
-.cardText {
-  padding: 20px 24px;
-}
-.work {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-  margin-bottom: 4;
-  padding: 0;
-}
-.aboutWork {
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 1.8;
-}
 Footer {
   background-color: var(--box-color);
-
   margin: 0 auto;
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.conteinerFooter {
+  display: flex;
+  justify-content: flex-start;
 }
 .logoFooter {
   display: inline-block;
@@ -438,4 +452,46 @@ Footer {
   text-decoration: none;
   font-style: normal;
   line-height: 1.7;
+}
+.boxFooter {
+  margin-left: 70px;
+  margin-top: 12px;
+}
+.listFooter {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--second-text-color);
+  margin-bottom: 20px;
+}
+.iconListFooter {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  width: 200px;
+  justify-content: space-between;
+}
+
+.socialIconFooter {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: var(--footer-icon--color);
+  fill: var(--second-text-color);
+}
+.socialLinksFooter {
+  width: 20px;
+  height: 20px;
+}
+.socialIconFooter:focus,
+.socialIconFooter:hover {
+  fill: var(--second-text-color);
+  background-color: var(--highlight-color);
 }
