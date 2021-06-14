@@ -118,7 +118,7 @@ body {
   fill: currentColor;
 }
 .social-links-address .linkItem:hover,
-.link:focus {
+.linkItem:focus {
   color: var(--highlight-color);
 }
 
